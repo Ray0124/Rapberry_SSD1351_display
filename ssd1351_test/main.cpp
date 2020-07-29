@@ -22,7 +22,6 @@ union pixel{
 
 unsigned short int frame_buffer_ori[128*128];
 unsigned short int frame_buffer[128*128];
-unsigned short int dummy[128*128];
 unsigned short int frames[2][128*128];
 unsigned char buf[200000];
 
