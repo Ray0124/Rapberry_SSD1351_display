@@ -36,9 +36,9 @@ unsigned short int x;
 
 int main(int argc, char **argv)
 {
-	short int i,j;
+		short int i,j;
 
-    int count=0,ret,cnt=0;
+   		int count=0,ret,cnt=0;
 		
 		if (!bcm2835_init())
 		{
@@ -51,7 +51,7 @@ int main(int argc, char **argv)
 		  printf("bcm2835_spi_begin failed. Are you running as root??\n");
 		  return 1;
 		}else
-        printf("bcm2835_spi_begin\n");
+        	printf("bcm2835_spi_begin\n");
    
    
    
@@ -81,41 +81,33 @@ while(1){
            //printf("ImageY is %d\n",ImageY);
            fread(&buf, ImageX*ImageY*2, 1, fp);
             count=0;
-          for (int h=0;h<128;h++)                     
-					   {
-						   for(int w=0;w<128;w++)
-						   {
-		   
-							   union pixel pix;
-							   pix.byte.low  =buf[count++];
-							   pix.byte.high =buf[count++];
-							   frame_buffer_ori[h*128+w]=pix.p;
-					         	
-						   }
-					   }
+          for (int h=0;h<128;h++){
+		for(int w=0;w<128;w++){
+			union pixel pix;
+			pix.byte.low  =buf[count++];
+			pix.byte.high =buf[count++];
+			frame_buffer_ori[h*128+w]=pix.p;		         	
+			}
+		}
 					   
 	                	
 			  	   
-					   cnt=0;                                      
-					   for(int h=0;h<128;h++)
-					   { 
-               cnt+=6;
-						   memcpy(&frames[0][h*128],&frame_buffer_ori[cnt],256);cnt+=122;
-        
-					   }
-			         tft1.fillFrame(0,0,ImageX,ImageY,frames[0]);
-					     delay(5000);
-               memset(frame_buffer,0x0000,256*256);    tft1.fillFrame(0,0,128,128,frame_buffer);
-               fclose(fp);
+	cnt=0;                                      
+	for(int h=0;h<128;h++){ 
+        	cnt+=6;
+		memcpy(&frames[0][h*128],&frame_buffer_ori[cnt],256);cnt+=122;
+         }
+	tft1.fillFrame(0,0,ImageX,ImageY,frames[0]);
+	delay(5000);
+        memset(frame_buffer,0x0000,256*256);    tft1.fillFrame(0,0,128,128,frame_buffer);
+        fclose(fp);
 
                        
    
-}   
-  printf("\nDone, bye !\n");
-		bcm2835_spi_end();
-		bcm2835_close();
+     }   
+	bcm2835_spi_end();
+	bcm2835_close();
 	return 0;  
-   
  }  
 
    
