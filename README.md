@@ -24,9 +24,9 @@ pin6: GND
 1.Use "make" to compile the project,and run "sudo ./spi".  
 2.Use "make clean" to clear spi and .o file
 
-128:
-![image](https://github.com/Ray0124/Rapberry_SSD1351_display/blob/master/128.jpg)
-64:
-![image](https://github.com/Ray0124/Rapberry_SSD1351_display/blob/master/64.jpg)
-120x100:
-![image](https://github.com/Ray0124/Rapberry_SSD1351_display/blob/master/120x100.jpg)
+128:  
+![image](https://github.com/Ray0124/Rapberry_SSD1351_display/blob/master/128.jpg)  
+64:  
+![image](https://github.com/Ray0124/Rapberry_SSD1351_display/blob/master/64.jpg)  
+120x100:  
+![image](https://github.com/Ray0124/Rapberry_SSD1351_display/blob/master/120x100.jpg)  
