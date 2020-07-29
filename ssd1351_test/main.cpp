@@ -50,8 +50,7 @@ int main(int argc, char **argv)
 		{
 		  printf("bcm2835_spi_begin failed. Are you running as root??\n");
 		  return 1;
-		}else
-        	printf("bcm2835_spi_begin\n");
+		}
    
    
    
