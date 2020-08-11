@@ -3,27 +3,27 @@
 #pragma pack(2)
 
 typedef struct tagBITMAPFILEHEADER {
-unsigned short int bfType;
- unsigned long int bfSize;
- unsigned short int bfReserved1;
- unsigned short int bfReserved2;
- unsigned long int bfOffBits;
+unsigned short  bfType;
+ unsigned long  bfSize;
+ unsigned short bfReserved1;
+ unsigned short bfReserved2;
+ unsigned long  bfOffBits;
   
 }BITMAPFILEHEADER;
 
 
 typedef struct tagBITMAPINFOHEADER {
- unsigned long int  biSize;
- unsigned long int  biWidth;
- unsigned long int  biHeight;
- unsigned short int biPlanes;
- unsigned short int biBitCount;
- unsigned long int  biCompression;
- unsigned long int  biSizeImage;
- unsigned long int  biXPelsPerMeter;
- unsigned long int  biYPelsPerMeter;
- unsigned long int  biClrUsed;
- unsigned long int  biClrImportant;
+ unsigned long   biSize;
+ unsigned long   biWidth;
+ unsigned long   biHeight;
+ unsigned short  biPlanes;
+ unsigned short  biBitCount;
+ unsigned long   biCompression;
+ unsigned long   biSizeImage;
+ unsigned long   biXPelsPerMeter;
+ unsigned long   biYPelsPerMeter;
+ unsigned long   biClrUsed;
+ unsigned long   biClrImportant;
 
 }BITMAPINFOHEADER;
 
